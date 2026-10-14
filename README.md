@@ -1,14 +1,16 @@
-Laboratorio 1: Configuración Básica 
+# Laboratorio 1: Configuración Básica 
 
-Objetivo:
+## Objetivo:
 Configurar los parámetros iniciales y de seguridad en un router Cisco para asegurar el acceso a la consola.
 
-Topología y Equipos
+## Topología y Equipos
 Dispositivo: Cisco 7200 Router (IOS 15.2)
 Herramienta de simulación: GNS3
-Equipos de prueba: 3 x VPCS
+Cisco IOU L2 Switch (IOS 15.1)
+Equipos de prueba: 3 x VPCS***
 
-Configuraciones 
+
+## Configuraciones 
  Establecimiento de hostname y desactivación de búsquedas DNS no deseadas 
  Configuración de contraseñas seguras y encriptadas 
  Creación de usuario local con privilegios máximos.
