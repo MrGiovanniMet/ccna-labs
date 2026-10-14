@@ -7,7 +7,8 @@ Configurar los parámetros iniciales y de seguridad en un router Cisco para aseg
 - Dispositivo: Cisco 7200 Router (IOS 15.2)
 - Herramienta de simulación: GNS3
 - Cisco IOU L2 Switch (IOS 15.1)
-- Equipos de prueba: 3 x VPCS***
+- Equipos de prueba: 3 x VPCS
+  
 
 
 ## Configuraciones:
