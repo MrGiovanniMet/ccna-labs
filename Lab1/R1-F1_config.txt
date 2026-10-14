@@ -1,0 +1,98 @@
+R1-F1#show run
+Building configuration...
+
+Current configuration : 1085 bytes
+!
+! Last configuration change at 16:13:25 UTC Wed Oct 14 2026
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R1-F1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging reload
+enable secret 5 $1$87y5$9.zy6ojE9O9KgKzPqRWy//
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name local.com
+ip cef
+login block-for 120 attempts 4 within 60
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+username gio secret 5 $1$I09L$vT9Tb0i4dHQGtViAL2qol0
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+ip ssh version 2
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.0.1 255.255.255.0
+ shutdown
+ duplex full
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+control-plane
+!
+banner motd ^CCOnly Authorized Access^C
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ exec-timeout 120 0
+ login local
+ transport input ssh
+!
+!
+end
+
+R1-F1#
