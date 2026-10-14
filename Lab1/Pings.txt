@@ -1,0 +1,64 @@
+PC1> show ip
+
+NAME        : PC1[1]
+IP/MASK     : 192.168.0.3/24
+GATEWAY     : 192.168.0.1
+DNS         :
+MAC         : 00:50:79:66:68:00
+LPORT       : 20000
+RHOST:PORT  : 127.0.0.1:20001
+MTU:        : 1500
+
+PC1> ping 192.168.0.4
+84 bytes from 192.168.0.4 icmp_seq=1 ttl=64 time=6.968 ms
+84 bytes from 192.168.0.4 icmp_seq=2 ttl=64 time=9.439 ms
+
+PC1> ping 192.168.0.5
+84 bytes from 192.168.0.5 icmp_seq=1 ttl=64 time=5.434 ms
+
+PC1>
+
+
+---
+
+PC2> show ip
+
+NAME        : PC2[1]
+IP/MASK     : 192.168.0.4/24
+GATEWAY     : 192.168.0.1
+DNS         :
+MAC         : 00:50:79:66:68:01
+LPORT       : 20002
+RHOST:PORT  : 127.0.0.1:20003
+MTU:        : 1500
+
+PC2> ping 192.168.0.3
+84 bytes from 192.168.0.3 icmp_seq=1 ttl=64 time=6.101 ms
+
+PC2> ping 192.168.0.5
+84 bytes from 192.168.0.5 icmp_seq=1 ttl=64 time=4.746 ms
+
+PC2>
+
+
+--- 
+
+PC3> show ip
+
+NAME        : PC3[1]
+IP/MASK     : 192.168.0.5/24
+GATEWAY     : 192.168.0.1
+DNS         :
+MAC         : 00:50:79:66:68:02
+LPORT       : 20004
+RHOST:PORT  : 127.0.0.1:20005
+MTU:        : 1500
+
+PC3> ping 192.168.0.3
+84 bytes from 192.168.0.3 icmp_seq=1 ttl=64 time=4.882 ms
+
+PC3> ping 192.168.0.4
+84 bytes from 192.168.0.4 icmp_seq=1 ttl=64 time=4.850 ms
+
+PC3>
+
